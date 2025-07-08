@@ -32,7 +32,7 @@ function Temp() {
     }
 
     try {
-      const response = await fetch('http://localhost:8080/products', {
+      const response = await fetch('https://fullstack-login-system.vercel.app/products', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
