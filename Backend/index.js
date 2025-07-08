@@ -18,3 +18,8 @@ app.use(cors({
 }));
 app.use('/auth' ,AuthRouter)
 app.use('/products',ProdRouter)
+
+
+app.listen(PORT, () => {
+  console.log(`✅ Server is running on port ${PORT}`);
+});
