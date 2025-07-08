@@ -105,7 +105,7 @@ function Login() {
           {loading ? 'loging up...' : 'Login'}
         </button>
         <span>
-          Don't have an account? <Link to="/Sign">Signup</Link>
+          Don't have an account? <Link to="/signup">Signup</Link>
         </span>
       </form>
       <ToastContainer />
