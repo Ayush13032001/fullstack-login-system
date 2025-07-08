@@ -37,7 +37,7 @@ function Signup() {
 
     try {
       setLoading(true);
-      const url = 'https://fullstack-login-system.vercel.app/auth/signup';
+      const url = `https://fullstack-login-system-backend.onrender.com/auth/signup`;
       const response = await fetchWithTimeout(url, {
         method: 'POST',
         headers: {
