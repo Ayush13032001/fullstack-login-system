@@ -12,9 +12,9 @@ const PORT = process.env.PORT;
 
     
 app.use(bodyParser.json()); 
-app.use(cors());
+app.use(cors({
+  origin: ['https://fullstack-login-system-1oaa.vercel.app'],
+  credentials: true
+}));
 app.use('/auth' ,AuthRouter)
 app.use('/products',ProdRouter)
-app.listen(PORT , () => {
-    console.log(`Server is running ${PORT}`)
-})
