@@ -1,0 +1,151 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed, #2193b0);
+  background-size: 400% 400%;
+  animation: bgMove 15s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* 💎 Advanced Glassmorphism */
+.container {
+  position: relative;
+  padding: 36px 48px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+  overflow: hidden;
+  animation: fadeSlideUp 1s ease forwards;
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+/* 🌈 Optional Glowing Border Ring */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(0, 255, 255, 0.2));
+  z-index: -1;
+  filter: blur(8px);
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container > h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffffff;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 16px;
+  padding: 10px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.container input:focus {
+  border-bottom: 2px solid #00ffe5;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.container input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-style: italic;
+}
+
+button {
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 12px 0;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 201, 255, 0.5);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #92fe9d, #00c9ff);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 201, 255, 0.8);
+}
