@@ -32,7 +32,7 @@ function Temp() {
     }
 
     try {
-      const response = await fetch('https://fullstack-login-system.vercel.app/products', {
+      const response = await fetch('https://fullstack-login-system-backend.onrender.com/products', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
